@@ -14,6 +14,7 @@ import { getWidgets, selectWidgets } from './store/widgetsSlice';
 import BudgetSummaryTab from './tabs/BudgetSummaryTab';
 import HomeTab from './tabs/HomeTab';
 import TeamMembersTab from './tabs/TeamMembersTab';
+import Upcoming from './tabs/Upcoming';
 
 const Root = styled(FusePageSimple)(({ theme }) => ({
   '& .FusePageSimple-header': {
@@ -86,25 +87,21 @@ function ProjectDashboardApp(props) {
           <Tab
             className="text-14 font-semibold min-h-40 min-w-64 mx-4 px-12"
             disableRipple
-            label="Home"
+            label="Scoreboard"
           />
           <Tab
             className="text-14 font-semibold min-h-40 min-w-64 mx-4 px-12"
             disableRipple
-            label="Budget Summary"
-          />
-          <Tab
-            className="text-14 font-semibold min-h-40 min-w-64 mx-4 px-12"
-            disableRipple
-            label="Team Members"
+            label="Weeks Data"
           />
         </Tabs>
       }
       content={
         <div className="p-12 lg:ltr:pr-0 lg:rtl:pl-0">
           {tabValue === 0 && <HomeTab />}
-          {tabValue === 1 && <BudgetSummaryTab />}
-          {tabValue === 2 && <TeamMembersTab />}
+          {tabValue === 1 && <Upcoming />}
+          {/* {tabValue === 1 && <BudgetSummaryTab />}
+          {tabValue === 2 && <TeamMembersTab />} */}
         </div>
       }
       rightSidebarContent={<ProjectDashboardAppSidebar />}

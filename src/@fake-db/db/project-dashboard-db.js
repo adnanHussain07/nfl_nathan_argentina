@@ -1984,7 +1984,7 @@ const projectDashboardAppDB = {
 	projects: [
 		{
 			id: 1,
-			name: 'ACME Corp. Backend App'
+			name: 'NFL API DATA COLLECTS'
 		},
 		{
 			id: 2,

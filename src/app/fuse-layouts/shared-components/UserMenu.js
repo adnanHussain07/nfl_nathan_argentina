@@ -56,7 +56,7 @@ function UserMenu(props) {
         )}
       </Button>
 
-      <Popover
+      {/* <Popover
         open={Boolean(userMenu)}
         anchorEl={userMenu}
         onClose={userMenuClose}
@@ -95,12 +95,6 @@ function UserMenu(props) {
               </ListItemIcon>
               <ListItemText primary="My Profile" />
             </MenuItem>
-            {/* <MenuItem component={Link} to="/apps/mail" onClick={userMenuClose} role="button">
-              <ListItemIcon className="min-w-40">
-                <Icon>mail</Icon>
-              </ListItemIcon>
-              <ListItemText primary="Inbox" />
-            </MenuItem> */}
             <MenuItem
               onClick={() => {
                 dispatch(logoutUser());
@@ -114,7 +108,7 @@ function UserMenu(props) {
             </MenuItem>
           </>
         )}
-      </Popover>
+      </Popover> */}
     </>
   );
 }

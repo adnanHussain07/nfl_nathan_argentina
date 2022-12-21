@@ -202,6 +202,9 @@ const locale = {
   PROCESINGTYM: 'Processing Time - 24 hours',
   WITHNOWDRAW: 'Withdraw Now',
   WITHDONT: 'You do not have enough money to withdraw',
+
+  ///////////NFL///////////////
+  NFLAPI: 'NFL API FETCHING',
 };
 
 export default locale;

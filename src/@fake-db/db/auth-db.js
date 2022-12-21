@@ -17,7 +17,7 @@ const authDB = {
 			password: 'admin',
 			role: 'admin',
 			data: {
-				displayName: 'Abbott Keitch',
+				displayName: 'Nathan Teuscher',
 				photoURL: 'assets/images/avatars/Abbott.jpg',
 				email: 'admin@fusetheme.com',
 				settings: {

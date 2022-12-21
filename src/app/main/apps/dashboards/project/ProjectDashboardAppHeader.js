@@ -61,11 +61,18 @@ function ProjectDashboardAppHeader(props) {
       <div className="flex justify-between items-center">
         <div className="flex items-center min-w-0">
           {user.data.photoURL ? (
+            // <Avatar
+            //   className="w-52 h-52 sm:w-64 sm:h-64"
+            //   alt="user photo"
+            //   src={user.data.photoURL}
+            // />
             <Avatar
               className="w-52 h-52 sm:w-64 sm:h-64"
               alt="user photo"
-              src={user.data.photoURL}
-            />
+            // src={user.data.photoURL}
+            >
+              <Icon className='text-64'>account_circle</Icon>
+            </Avatar>
           ) : (
             <Avatar className="w-52 h-52 sm:w-64 sm:h-64">{user.data.displayName[0]}</Avatar>
           )}
@@ -82,7 +89,7 @@ function ProjectDashboardAppHeader(props) {
             </div>
           </div>
         </div>
-        <Hidden lgUp>
+        {/* <Hidden lgUp>
           <IconButton
             onClick={(ev) => pageLayout.current.toggleRightSidebar()}
             aria-label="open left sidebar"
@@ -91,36 +98,37 @@ function ProjectDashboardAppHeader(props) {
           >
             <Icon>menu</Icon>
           </IconButton>
-        </Hidden>
+        </Hidden> */}
       </div>
-      <div className="flex items-end">
-        <div className="flex items-center">
-          <Box
-            className={clsx('flex items-center h-40 px-16 text-13 sm:text-16')}
-            sx={{
-              background: (theme) => lighten(theme.palette.primary.dark, 0.1),
-              color: (theme) => theme.palette.primary.contrastText,
-              borderRadius: '16px 0 0 0',
-            }}
-          >
-            {_.find(projects, ['id', selectedProject.id]).name}
-          </Box>
-          <IconButton
-            className="h-40 w-40 p-0"
-            sx={{
-              background: (theme) => lighten(theme.palette.primary.dark, 0.1),
-              color: (theme) => theme.palette.primary.contrastText,
-              borderRadius: '0 16px 0 0',
-              marginLeft: '1px',
-            }}
-            aria-owns={selectedProject.menuEl ? 'project-menu' : undefined}
-            aria-haspopup="true"
-            onClick={handleOpenProjectMenu}
-            size="large"
-          >
-            <Icon>more_horiz</Icon>
-          </IconButton>
-          <Menu
+      <Hidden mdDown>
+        <div className="flex items-end">
+          <div className="flex items-center">
+            <Box
+              className={clsx('flex items-center h-40 px-16 text-13 sm:text-16')}
+              sx={{
+                background: (theme) => lighten(theme.palette.primary.dark, 0.1),
+                color: (theme) => theme.palette.primary.contrastText,
+                borderRadius: '16px 0 0 0',
+              }}
+            >
+              {_.find(projects, ['id', selectedProject.id]).name}
+            </Box>
+            <IconButton
+              className="h-40 w-40 p-0"
+              sx={{
+                background: (theme) => lighten(theme.palette.primary.dark, 0.1),
+                color: (theme) => theme.palette.primary.contrastText,
+                borderRadius: '0 16px 0 0',
+                marginLeft: '1px',
+              }}
+              aria-owns={selectedProject.menuEl ? 'project-menu' : undefined}
+              aria-haspopup="true"
+              onClick={handleOpenProjectMenu}
+              size="large"
+            >
+              <Icon>more_horiz</Icon>
+            </IconButton>
+            {/* <Menu
             id="project-menu"
             anchorEl={selectedProject.menuEl}
             open={Boolean(selectedProject.menuEl)}
@@ -137,9 +145,10 @@ function ProjectDashboardAppHeader(props) {
                   {project.name}
                 </MenuItem>
               ))}
-          </Menu>
+          </Menu> */}
+          </div>
         </div>
-      </div>
+      </Hidden>
     </div>
   );
 }

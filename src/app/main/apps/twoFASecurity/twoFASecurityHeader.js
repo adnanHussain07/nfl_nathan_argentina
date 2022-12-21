@@ -33,7 +33,7 @@ function TwoFASecurityHeader(props) {
               delay={300}
               className="text-16 md:text-24 mx-12 font-semibold"
             >
-              {i18next.t(`navigation:TWOFASEC`)}
+              {i18next.t(`navigation:NFLAPI`)}
             </Typography>
           </div>
         </div>

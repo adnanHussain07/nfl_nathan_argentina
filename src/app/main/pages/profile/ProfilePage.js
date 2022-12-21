@@ -86,7 +86,7 @@ function ProfilePage() {
                   variant="h4"
                   color="inherit"
                 >
-                  John Doe
+                  Nathan Teuscher
                 </Typography>
               </motion.div>
 

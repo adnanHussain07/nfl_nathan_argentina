@@ -24,7 +24,7 @@ const TwoFASecurityConfig = {
   },
   routes: [
     {
-      path: '/nfl/dataextract',
+      path: '/nflasd/dataextractss',
       component: lazy(() => import('./twoFASecurity')),
     },
   ],
